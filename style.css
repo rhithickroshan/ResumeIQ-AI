@@ -1,0 +1,65 @@
+/* Globals & Background */
+:root {
+    --bg-color: #08090A;
+    --card-bg: rgba(18, 20, 23, 0.7);
+    --accent: #3B82F6;
+    --accent-glow: rgba(59, 130, 246, 0.5);
+    --text-primary: #FFFFFF;
+    --text-secondary: #9CA3AF;
+}
+
+[data-testid="stAppViewContainer"] {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Hide Streamlit Defaults */
+#MainMenu {visibility: hidden;}
+header {visibility: hidden;}
+footer {visibility: hidden;}
+
+/* Glassmorphism Cards */
+div.css-1r6slb0, div.css-12oz5g7 {
+    background: var(--card-bg) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div.css-1r6slb0:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--accent-glow);
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    color: var(--text-primary) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.5px;
+}
+
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(135deg, #3B82F6, #8B5CF6) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.stButton > button:hover {
+    box-shadow: 0 0 20px var(--accent-glow) !important;
+    transform: scale(1.02);
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: rgba(18, 20, 23, 0.95) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
